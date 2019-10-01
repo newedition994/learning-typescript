@@ -41,7 +41,7 @@ function hasName(obj) {
 if (hasName(myVariable)) {
     console.log(myVariable.name);
 }
-myVariable.toUpperCase();
+//(myVariable as string).toUpperCase();
 // can have multiple variable types
 var multiType;
 multiType = 20;
@@ -55,3 +55,11 @@ function add(num1, num2) {
 }
 add(5, 10);
 add(5);
+function fullName(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+var p = {
+    firstName: "Bruce",
+    lastName: "Wayne"
+};
+fullName(p);

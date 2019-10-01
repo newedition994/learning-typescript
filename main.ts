@@ -45,7 +45,7 @@ let randomValue: any = 10;
 randomValue = true;
 randomValue = "Mike"; // does not give a compiler error
 
-let myVariable: any = 10;
+let myVariable: unknown = 10;
 
 // overrides the errors when you change any to unknown
 function hasName(obj: any): obj is { name: string } {
@@ -55,7 +55,7 @@ function hasName(obj: any): obj is { name: string } {
 if (hasName(myVariable)) {
   console.log(myVariable.name);
 }
-(myVariable as string).toUpperCase();
+//(myVariable as string).toUpperCase();
 
 // can have multiple variable types
 let multiType: number | boolean;
@@ -69,3 +69,20 @@ function add(num1: number, num2?: number): number {
 }
 add(5, 10);
 add(5);
+
+// Interface
+interface Person {
+  firstName: string;
+  lastName: string;
+}
+
+function fullName(person: Person) {
+  console.log(`${person.firstName} ${person.lastName}`);
+}
+
+let p = {
+  firstName: "Bruce",
+  lastName: "Wayne"
+};
+
+fullName(p);
