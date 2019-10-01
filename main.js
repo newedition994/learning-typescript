@@ -33,3 +33,12 @@ console.log(c);
 var randomValue = 10;
 randomValue = true;
 randomValue = "Mike"; // does not give a compiler error
+var myVariable = 10;
+// overrides the errors when you change any to unknown
+function hasName(obj) {
+    return !!obj && typeof obj === "object" && "name" in obj;
+}
+if (hasName(myVariable)) {
+    console.log(myVariable.name);
+}
+myVariable.toUpperCase();
