@@ -63,3 +63,16 @@ var p = {
     lastName: "Wayne"
 };
 fullName(p);
+// Classes & Access Modifiers
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.greet = function () {
+        console.log("Good Morning " + this.employeeName);
+    };
+    return Employee;
+}());
+var emp1 = new Employee("Mike");
+console.log(emp1.employeeName);
+emp1.greet();
