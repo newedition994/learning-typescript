@@ -2,14 +2,14 @@ export {};
 let message = "Welcome back";
 console.log(message);
 
-// variable declarations
+// Variable Declarations
 let x = 10;
 const y = 20;
 
 let sum;
 const title = "Codevolution";
 
-//variable types
+//Variable Types
 let isBeginner: boolean = true;
 let total: number = 0;
 let name: string = "Mike";
@@ -56,3 +56,16 @@ if (hasName(myVariable)) {
   console.log(myVariable.name);
 }
 (myVariable as string).toUpperCase();
+
+// can have multiple variable types
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
+
+// Functions
+function add(num1: number, num2?: number): number {
+  if (num2) return num1 + num2;
+  else return num1;
+}
+add(5, 10);
+add(5);

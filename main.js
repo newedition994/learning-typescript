@@ -2,12 +2,12 @@
 exports.__esModule = true;
 var message = "Welcome back";
 console.log(message);
-// variable declarations
+// Variable Declarations
 var x = 10;
 var y = 20;
 var sum;
 var title = "Codevolution";
-//variable types
+//Variable Types
 var isBeginner = true;
 var total = 0;
 var name = "Mike";
@@ -42,3 +42,16 @@ if (hasName(myVariable)) {
     console.log(myVariable.name);
 }
 myVariable.toUpperCase();
+// can have multiple variable types
+var multiType;
+multiType = 20;
+multiType = true;
+// Functions
+function add(num1, num2) {
+    if (num2)
+        return num1 + num2;
+    else
+        return num1;
+}
+add(5, 10);
+add(5);
