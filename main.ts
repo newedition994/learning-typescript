@@ -89,7 +89,7 @@ fullName(p);
 
 // Classes & Access Modifiers
 class Employee {
-  employeeName: string;
+  public employeeName: string; // secures the class properties for later use in other classes(child classes)
 
   constructor(name: string) {
     this.employeeName = name;
